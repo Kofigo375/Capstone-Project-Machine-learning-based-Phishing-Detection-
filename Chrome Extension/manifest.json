@@ -1,11 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "g13 phish catcher",
-    "description": "A chrome browser extension that detect phing attacks using machine learning algorithms",
-    "version": "1.0.1",
-    "permissions": ["activeTab", "storage"],
+    "manifest_version": 2,
+  
+    "name": "Group 13 Phishing Detector",
+    "description": "This extension helps you avoid accessing malicious websites by giving you a chance to analyze the website before you interact with it.",
+    "version": "1.0",
+  
     "browser_action": {
-        "default_popup": "popup.html",
-        "default_icon": "icon.png"
-    }
-}
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+      "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "https://ajax.googleapis.com/",
+      "tabs",
+      "<all_urls>"
+    ]
+  }
